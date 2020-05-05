@@ -1,104 +1,111 @@
-﻿<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-
-	<title>LOVE</title>
-
-
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<style type="text/css">
-		@font-face {
-			font-family: digit;
-			src: url("digital-7_mono.ttf"/*tpa=./digital-7_mono.ttf*/) format("truetype");
-		}
-	</style>
-	<link rel="icon" href="http://love.zcjun.com/love/love1/favicon.ico" />
-	<link href="css/default.css" tppabs="./css/default.css" type="text/css" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery.js" tppabs="./js/jquery.js"></script>
-	<script type="text/javascript" src="js/garden.js" tppabs="./js/garden.js"></script>
-    <script type="text/javascript" src="js/functions.js" tppabs="./js/functions.js"></script>
 <body>
-	<div id="mainDiv">
-		<div id="content">
-			<div id="code">
-				<span class="comments">艳：</span><br />
-				<span class="space"><span class="comments">I love you three thousand times, or more.</span></span><br />
- 				<span class="space"/><span class="comments">--- ---杰</span><br />
-				<!--<span class="space"/><span class="comments">艳，在这没有月的漆黑的夜里，我独自坐在窗前写着这封信，希望睡前可以吻你；希望睡时可以抱着你；希望醒来可以看到你，有你的日子，一切都是那么美好，风和日丽，鲜花遍地；没你的日子，白昼是那么的黯淡，黑夜是那么的漫长。你的话已经锁在我的记忆里了，那钥匙你就替我保管一辈子吧。如果你冷，我将你拥入怀中；如果你哭，我替你擦去泪痕。你像那天边的云，飘泊不定，叫人难以追寻；你像那水中的萍，流移四方，叫我难以琢磨。这样的习惯也是一种甜蜜的负担，思念你早已成为我生活中不可缺少的习惯。思念就像河流般，滔滔不绝地流向大海，流向我的心房，当我闭上双眼，你的身影又浮现在我的眼前，一些路我们并肩走过，一些故事我们就是主人公，一首歌我们对唱了那么久，永远不变的是心中深藏的对爱的执着。如果，我只有一天的生命，我会去找你，并告诉你，我是如此的依恋你。我们那两颗充满柔情和陶醉的心永远在一起，我愿做天上的星星，给你永恒的光芒，永远守候在你身边。盼你在每一次想你的瞬间，爱你在每一秒呼吸的间隙。不知为什么，只要有你在我身边，我的心便不再惶惶不安。有你的日子你就是一切，没你的日子一切都是你。
-				艳，我想告诉你，自从有了你，我觉得整个世界都在向我点头微笑，你那充满朝气的身影总是伴着月光入我梦来，让我牵挂不停。还记得我俩的初遇。那一瞬间，时间就像静止了一般，你的气质让我觉得惊喜，认识你我的生活充满生机，爱上你我的生活充满激情。</span><br />
-				<span class="space"/><span class="comments">艳，保留一个最浪漫的故事，给你一声祝福，一个kiss，爱你直到永远！</span>
-				<span class="comments">杰</span><br /> -->
-			</div>
-			<div id="loveHeart">
-				<canvas id="garden"></canvas>
-				<div id="words">
-					<div id="messages">
-						<!-- 某某,  -->这是我们在一起的第
-						<div id="elapseClock"></div>
-					</div>
-					<div id="loveu">
-						永远爱你，一辈子，不分离！<br/>
-						<div class="signature">- 最爱你的人</div>
-					</div>
-			</div>
-</div>
-	<div class="bg1">	
-		<div class="main">
-			<footer style="line-height:20px">
-                <div id="copyright">
-                  <!-- <p>Copyright © 2015 <a href='http://t.qq.com/D1231233323' target="_blank">子成君</a> 
-                    子成君微博<a href="http://t.qq.com/D1231233323" target="_blank">子成君</a> -->
-
-
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>那年初夏</title>
+    <meta name="author" content="LIJIE" />
+    <meta name="description" content="愿你三冬暖，愿你春不寒；愿你天黑有灯，下雨有伞。愿你余生有我相伴……" />
+    <meta property="og:title" content="那年初夏" />
+    <meta property="og:description" content="愿你三冬暖，愿你春不寒；愿你天黑有灯，下雨有伞。愿你余生有我相伴……" />
+    <meta property="og:site_name" content="那年初夏" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="article:published_time" content="2020-01-29T12:43:14+08:00" />
+    <meta property="article:modified_time" content="2020-01-29T12:43:14+08:00" />
+    <meta name="twitter:title" content="那年初夏" />
+    <meta name="twitter:description" content="愿你三冬暖，愿你春不寒；愿你天黑有灯，下雨有伞。愿你余生有我相伴……" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="" />
+    <meta name="keywords" content="余生且长，我不想有情有义，只想有钱有你。" />
+    <meta name="template" content="Cupid" />
+    <link rel="shortcut icon" href="20200505/image/favicon.ico">
+    <link rel="stylesheet" href="20200505/css/main.css" />
+    <link href="20200505/css/bootstrap.min.css" rel="stylesheet">
+    <script src="20200505/js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="top container-fluid">
+        <div class=" logodiv">
+            <div class="row align-items-center">
+                <div class="col-5">
+                    <div class=" ml-auto" style="text-align:center">
+                        <div class="lover" style="background-image: url(20200505/image/girl.jpg);"></div>
+                        <p class="lover-txt">艳</p>
+                    </div>
                 </div>
-		</div>
-	</div>
-</div>
-
-	<script type="text/javascript">
-		var offsetX = $("#loveHeart").width() / 2;
-		var offsetY = $("#loveHeart").height() / 2 - 55;
-		var together = new Date();
-		        //var strs = "2019-05-21 21:36:00";	//认识的日子
-		var strs = "2019-06-05 00:21:00";	//在一起的日子
-              var nowTime=new Date();
-              var together = new Date(strs.replace(/-/g,"/"));	
-
-		if (!document.createElement('canvas').getContext) {
-			var msg = document.createElement("div");
-			msg.id = "errorMsg";
-			msg.innerHTML = "提醒您：您的浏览器版本过旧^_^<br/>"+
-				"推荐使用 <a href='http://51bbw.cn/liulanqi' target='_blank'>百度浏览器</a><br/>请先升级您的浏览器，效果很炫哦~~"; 
-			document.body.appendChild(msg);
-			$("#code").css("display", "none")
-			$("#copyright").css("position", "absolute");
-			$("#copyright").css("bottom", "10px");
-		    document.execCommand("stop");
-		} else {
-			setTimeout(function () {
-				adjustWordsPosition();
-				startHeartAnimation();
-			}, 5000);
-
-			timeElapse(together);
-			setInterval(function () {
-				timeElapse(together);
-			}, 500);
-
-			adjustCodePosition();
-			$("#code").typewriter();
-		}
-	</script>
-
-    <audio id="bgmMusic" src="http://qzone.haoduoge.com/music/C2C3F0LSXH4D771253124A26CF9C71C939B2A.mp3" preload="auto" type="audio/mp3" autoplay loop></audio>
-    
-
-<!--<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"1","bdPos":"right","bdTop":"100"},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
- -->
-<!-- 51bbw.cn Baidu tongji analytics -->
-<!--<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc5987e1ba8b95bbc85efa2ecefbfc06e' type='text/javascript'%3E%3C/script%3E"));
-</script> -->
+                <div class="col-2 text-center">
+                    <img class="icon-heart" src="20200505/image/love.png" />
+                </div>
+                <div class="col-5 ">
+                    <div class="  mr-auto" style="text-align:center">
+                        <div class="lover" style="background-image: url(20200505/image/boy.jpg);"></div>
+                        <p class="lover-txt">杰</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class=" container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 contl">
+                    <div class="contop">
+                        <img class="iconimg" src="20200505/image/boyandgirl.png">
+                        <h5>💘这个小破站将会记录我们的点点滴滴💘</h5>
+                        <h6>📝这份<a style="color:tomato" href="#">【恋爱清单】</a>，记录我们的甜蜜时刻</h6>
+                        <h6>🦄相信我们还会留下更多美好的回忆，谢谢大家的<a style="color:tomato" href="#">【祝福】</a></h6>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 contr">
+                    <div class="condown text-center">
+                        <h5>我们风雨同舟已经走过</h5>
+                        <div id="site_runtime"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+    	<div class="foot-top container">
+    		<div class=" row">
+    			<div class="text-center" style="margin: 0 auto;padding: 0 20px;">
+    				<p>访客数：5201314</p>
+    				<p></p>
+    			</div>
+    		</div>
+    	</div>
+    	<script src="20200505/js/popper.min.js"></script>
+    	<script src="20200505/js/bootstrap.min.js"></script>
+    	<script src="20200505/js/main.js"></script>
+    	<script>
+    		window.showSiteRuntime = function() {
+    			site_runtime = $("#site_runtime");
+    			if (!site_runtime) {
+    				return;
+    			}
+    			window.setTimeout("showSiteRuntime()", 1000);
+    			start = new Date("2019-06-05 00:21:00");
+    			now = new Date();
+    			T = (now.getTime() - start.getTime());
+    			i = 24 * 60 * 60 * 1000;
+    			d = T / i;
+    			D = Math.floor(d);
+    			h = (d - D) * 24;
+    			H = Math.floor(h);
+    			m = (h - H) * 60;
+    			M = Math.floor(m);
+    			s = (m - M) * 60
+    			S = Math.floor(s);
+    			site_runtime.html("第 <span class=\"digit\">" + D + "</span> 天 <br/><span class=\"digit\">" + H + "</span> 小时 <span class=\"digit\">" + M + "</span> 分钟 <span class=\"digit\">" + S + "</span> 秒");
+    		};
+    		showSiteRuntime();
+    	</script>
+	</footer>
 </body>
 </html>
+</body>
