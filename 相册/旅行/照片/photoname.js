@@ -12,4 +12,4 @@ var photoName = new Array(
 "大标题1.分类1.fdsg1.jpg", 
 "分类2.fdsg1.jpg", 
 ); 
-var currentName = "纪念日" 
+var currentName = "旅行" 
