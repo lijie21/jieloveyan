@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Home</title>
+
+<!-- Google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+
+<!-- font awesome -->
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+
+<!-- animate.css -->
+<link rel="stylesheet" href="assets/animate/animate.css" />
+<link rel="stylesheet" href="assets/animate/set.css" />
+
+<!-- gallery -->
+<link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+
+<!-- favicon -->
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+
+<body onload="init();">
+
+<!-- works -->
+<div id="works"  class=" clearfix grid"> 
+    <figure class="effect-oscar  wowload fadeIn">
+        <img src="images/portfolio/2.jpg" alt="img01"/>
+        <figcaption>
+            <h2>待定</h2>
+            <p>美好的生活正在继续 ... ...<br>
+            <a href="images/portfolio/2.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+</div>
+<!-- works -->
+
+<a href="#works" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
+
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title">Title</h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->    
+</div>
+
+<!-- jquery -->
+<script src="assets/jquery.js"></script>
+
+<!-- wow script -->
+<script src="assets/wow/wow.min.js"></script>
+
+<!-- boostrap -->
+<script src="assets/bootstrap/js/bootstrap.js" type="text/javascript" ></script>
+
+<!-- jquery mobile -->
+<script src="assets/mobile/touchSwipe.min.js"></script>
+<script src="assets/respond/respond.js"></script>
+
+<!-- gallery -->
+<script src="assets/gallery/jquery.blueimp-gallery.min.js"></script>
+
+<!-- custom script -->
+<script src="assets/script.js"></script>
+
+<script src="../cache/RecordLifeAlbumFolderName.js"></script>
+
+<script type="text/javascript">
+
+    function init(){
+    	var albumCategoryCameArr = AlbumCategoryCameInit();
+    	var albumCategoryCameCoverArr = AlbumCategoryCameCoverInit();
+    	var albumCategoryCameSloganArr = AlbumCategoryCameSloganInit();
+    	/*
+    	
+	<figure class="effect-oscar  wowload fadeIn">
+        <img src="images/portfolio/1.jpg" alt="img01"/>
+        <figcaption>
+            <h2>Nature</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/1.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+
+    	 */
+    	for (var i = albumCategoryCameArr.length - 1; i >= 1; i--) {
+    		var coverPhotoPath = "../相册/"+albumCategoryCameArr[i]+"/封面/"+albumCategoryCameCoverArr[i];
+    		var htmlPhotoPath = "../相册/"+albumCategoryCameArr[i]+"/html/index.html";
+    		//alert(coverPhotoPath);
+    		var v1 = '<figure class="effect-oscar  wowload fadeIn">'+
+    			'<img src="'+ coverPhotoPath +'" alt="img01"/>'+
+    			'<figcaption>'+
+    			'<h2>'+ albumCategoryCameArr[i] +'</h2>'+
+    			'<p>'+ albumCategoryCameSloganArr[i] +'<br>'+
+    			'<a href="'+ htmlPhotoPath +'" target="view_window">View more</a></p>'+
+    			'</figcaption>'+
+    			'</figure>';
+    		$("#works").prepend(v1);
+    	}
+    	
+    }
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <meta name="description" content=""/>
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,600,700" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <link href="styles/main.css" rel="stylesheet">
+  </head>
+  <body id="top"  onload="init();">
+    <div class="page">
+      <header>
+        <div class="pp-header">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container"><a href="index.html"><img src="images/favicon.png"></a><a class="navbar-brand" href="index.html" id="aAdd"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="page-content">
+        <div class="container">
+<div class="container pp-section">
+  <div class="row">
+    <div class="col-md-9 col-sm-12 px-0">
+      <h1 class="h3">生活的美好，美好的生活</h1>
+    </div>
+  </div>
+</div>
+<div class="container px-0 py-4">
+  <div class="pp-category-filter">
+    <div class="row">
+      <div class="col-sm-12" id="topicAdd">
+<!--         <a class="btn btn-primary pp-filter-button" href="#" data-filter="all">All</a>
+        <a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="people">People</a>
+        <a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="nature">Nature</a>
+        <a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="computer">Computer</a>
+        <a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="food">Food</a> -->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container px-0">
+  <div class="pp-gallery">
+    <div class="card-columns" id="photoAdd">
+
+    </div>
+  </div>
+</div>
+<div class="pp-section"></div></div>
+      </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="../照片/photoname.js"></script>
+    <script type="text/javascript">
+    function init(){
+      $("#aAdd").prepend(currentName);
+      var topicArr= new Array(); //定义一数组-记录分类
+      var topicNum=0;
+      for (var i = photoName.length - 1; i >= 0; i--) {
+        var v1 = photoName[i].substr(-3,3);
+        if(v1==".js"){
+          continue;
+        }
+        var strs= new Array(); //定义一数组
+        strs=photoName[i].split("."); //字符分割
+        var current = currentName;
+        var topic = "其它";
+        if(strs.length==3){
+            topic = strs[0];
+            topicArr[topicNum]=topic;
+            topicNum++;
+        }
+        if(strs.length==4){
+            current=strs[0];
+            topic=strs[1];
+            topicArr[topicNum]=topic;
+            topicNum++;
+        }
+        var path = "../照片/"+photoName[i];
+        var v = '<div class="card" data-groups="[&quot;'+ topic +'&quot;]">'+
+                '<figure class="pp-effect"><img class="img-fluid" src="'+ path +'" alt="'+ topic +'"/>'+
+                '<figcaption>'+
+                '<div class="h4">'+ current +'</div>'+
+                '<p>'+ topic +'</p>'+
+                '</figcaption>'+
+                '</figure>'+
+                '</div>';
+        $("#photoAdd").prepend(v);
+        var current = currentName;
+        var topic = "其它";
+      }
+      for (var i = topicArr.length - 1; i >= 0; i--) {
+        var v2='<a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="'+ topicArr[i] +'">'+ topicArr[i] +'</a>';
+        $("#topicAdd").prepend(v2);
+      }
+      var v3='<a class="btn btn-primary pp-filter-button" href="#" data-filter="all">All</a>';
+      $("#topicAdd").prepend(v3);
+    }
+    </script>
+  </body>
+</html>
